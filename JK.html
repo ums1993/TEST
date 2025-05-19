@@ -2,98 +2,186 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>웨딩홀 리스트</title>
-  <!-- Font Awesome 아이콘 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/1gP1w5RX1f0jlD3km0rU3uogmjS8Jz+qK5TkAdIupNzhO0k3QFckdH+jK9K5G65zv6KX1IvVZTXcJbZaqOt4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <title>예식장 정보</title>
   <link href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-
     body {
-      margin: 0;
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #f9f7f9, #f1f4f9);
       font-family: 'SUIT', sans-serif;
-      color: #333;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #a76cff;
-      margin-bottom: 40px;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      background: linear-gradient(135deg, #f8f9fb, #edf0f5);
+      margin: 40px;
+      color: #2c3e50;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.75);
+      background-color: white;
       border-radius: 16px;
-      padding: 24px 20px;
-      text-align: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(10px);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    .card h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #a76cff;
+      text-align: center;
+      border-bottom: 2px solid #f1f1f1;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
     }
 
-    .card a {
-      text-decoration: none;
-      color: #5a30ff;
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section strong {
+      color: #5d5d5d;
       font-weight: 600;
-      font-size: 1.05rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
     }
 
-    .card i {
-      color: #e488ff;
+    .hall-list, .features-list {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .hall-item {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .price-2025 {
+      color: #6c5ce7;
+      font-weight: bold;
+    }
+
+    .price-2026 {
+      color: #e67e22;
+      font-weight: bold;
+    }
+
+    .features-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 6px;
+    }
+
+    .features-list li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+    }
+
+    /* 이미지 갤러리 */
+    .gallery-section {
+      margin-top: 40px;
+    }
+
+    .gallery-section h3 {
+      color: #5a30ff;
       font-size: 1.2rem;
+      margin-bottom: 12px;
     }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image-row img {
+      width: calc(50% - 5px);
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .image-row img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .image-row img {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1><i class="fas fa-ring"></i> 웨딩홀 리스트</h1>
+  <div class="card">
+    <h2>JK 아트컨벤션</h2>
 
-  <div class="grid-container">
-    <div class="card"><a href="./JK.html"><i class="fas fa-ring"></i> JK 아트컨벤션<br>(영등포)</a></div>
-    <div class="card"><a href="#pj"><i class="fas fa-ring"></i> PJ호텔<br>(을지로)</a></div>
-    <div class="card"><a href="#grand"><i class="fas fa-ring"></i> 그랜드컨벤션센터<br>(당산)</a></div>
-    <div class="card"><a href="#yeouido"><i class="fas fa-ring"></i> 여의도웨딩컨벤션<br>(여의도)</a></div>
-    <div class="card"><a href="#signature"><i class="fas fa-ring"></i> 웨딩시그니처<br>(합정)</a></div>
-    <div class="card"><a href="#erum"><i class="fas fa-ring"></i> 이룸웨딩컨벤션<br>(공덕)</a></div>
-    <div class="card"><a href="#laruce"><i class="fas fa-ring"></i> 라루체<br>(명동)</a></div>
-    <div class="card"><a href="#botanic"><i class="fas fa-ring"></i> 보타닉파크웨딩<br>(마곡나루)</a></div>
-    <div class="card"><a href="#villa-nonhyeon"><i class="fas fa-ring"></i> 빌라드지디 논현<br>(강남구청)</a></div>
-    <div class="card"><a href="#villa-cheongdam"><i class="fas fa-ring"></i> 빌라드지디 청담<br>(청담)</a></div>
-    <div class="card"><a href="#sempre"><i class="fas fa-ring"></i> 시엠프레 도산150<br>(신사)</a></div>
-    <div class="card"><a href="#tov"><i class="fas fa-ring"></i> 토브헤세드<br>(학동)</a></div>
-    <div class="card"><a href="#class"><i class="fas fa-ring"></i> 더클래스청담<br>(압구정로데오)</a></div>
-    <div class="card"><a href="#crest"><i class="fas fa-ring"></i> 크레스트72<br>(동대입구)</a></div>
-    <div class="card"><a href="#royal"><i class="fas fa-ring"></i> 로얄파크컨벤션<br>(삼각지)</a></div>
-    <div class="card"><a href="#the-leeng"><i class="fas fa-ring"></i> 더링킁호텔서울<br>(구로)</a></div>
-    <div class="card"><a href="#ons"><i class="fas fa-ring"></i> 온즈드롬<br>(명동)</a></div>
-    <div class="card"><a href="#eltower"><i class="fas fa-ring"></i> 엘타워<br>(양재)</a></div>
+    <div class="section">
+      <strong>📍 위치:</strong> 영등포역(1호선) / 문래역(2호선)
+    </div>
+
+    <div class="section">
+      <strong>🏛️ 홀 정보 및 대관료:</strong>
+      <ul class="hall-list">
+        <li class="hall-item">
+          <strong>엠버루체 (170석)</strong> — 
+          <span class="price-2025">2025년: 900만원</span>, 
+          <span class="price-2026">2026년: 1,100만원</span>
+        </li>
+        <li class="hall-item">
+          <strong>아트리움 (200석)</strong> — 
+          <span class="price-2025">2025년: 800만원</span>, 
+          <span class="price-2026">2026년: 900만원</span>
+        </li>
+        <li class="hall-item">
+          <strong>그랜드홀 (250석)</strong> — 
+          <span class="price-2025">2025년: 900만원</span>, 
+          <span class="price-2026">2026년: 1,000만원</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <strong>🍽️ 식사 정보:</strong> 뷔페 (180여 가지 음식), 해산물 다양 / 주류 다양 / 음식 맛 GOOD!
+    </div>
+
+    <div class="section">
+      <strong>💰 식사 단가:</strong> 
+      <span class="price-2025">2025년: 7.2만원</span>, 
+      <span class="price-2026">2026년: 7.6만원</span>
+    </div>
+
+    <div class="section">
+      <strong>📝 특이사항:</strong>
+      <ul class="features-list">
+        <li>가격 합리적</li>
+        <li>주차 난이도 어렵</li>
+        <li>정신없는 로비 / 연회장 다른 층</li>
+      </ul>
+    </div>
+
+    <div class="gallery-section">
+      <h3>엠버루체 홀 (밝은 홀 / 가든 느낌, 제일 인기 많음)</h3>
+      <div class="image-row">
+        <img src="http://www.jkart.co.kr/attachList/upload/hall/c20181202132955450/p20181203085447407/img20240906222016010.jpg" alt="엠버루체 1">
+        <img src="http://www.jkart.co.kr/attachList/upload/hall/c20181202132955450/p20181203085447407/img20240906222016267.jpg" alt="엠버루체 2">
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <h3>아트리움 홀 (어두운 홀 / 극장 느낌)</h3>
+      <div class="image-row">
+        <img src="http://www.jkart.co.kr/attachList/upload/hall/c20181202132955450/p20181203092037197/img20250404201414987.jpg" alt="아트리움 1">
+        <img src="http://www.jkart.co.kr/attachList/upload/hall/c20181202132955450/p20181203092037197/img20250404201415247.jpg" alt="아트리움 2">
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <h3>그랜드홀 (어두운 홀)</h3>
+      <div class="image-row">
+        <img src="http://www.jkart.co.kr/attachList/upload/hall/c20181202132955450/p20181202202647770/img20210611211211560.jpg" alt="그랜드홀 1">
+        <img src="http://www.jkart.co.kr/attachList/upload/hall/c20181202132955450/p20181202202647770/img20210611211211800.jpg" alt="그랜드홀 2">
+      </div>
+    </div>
+
   </div>
 
 </body>
