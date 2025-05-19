@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>예식장 정보</title>
   <link href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+<style>
     body {
       font-family: 'SUIT', sans-serif;
       background: linear-gradient(135deg, #f8f9fb, #edf0f5);
@@ -40,16 +40,6 @@
       font-weight: 600;
     }
 
-    .hall-list, .features-list {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    .hall-item {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
     .price-2025 {
       color: #6c5ce7;
       font-weight: bold;
@@ -60,20 +50,70 @@
       font-weight: bold;
     }
 
-    .features-list li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 6px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
     }
 
-    .features-list li::before {
-      content: "✔️";
-      position: absolute;
-      left: 0;
-      color: #27ae60;
+    table, th, td {
+      border: 1px solid #ddd;
     }
 
-    /* 이미지 갤러리 */
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #a76cff;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    td strong {
+      color: #6c5ce7;
+    }
+
+    .schedule-section {
+      margin-top: 30px;
+      background: #f5f7fa;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .schedule-section h3 {
+      color: #5a30ff;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .schedule-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .schedule-item {
+      background: #ffffff;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .schedule-item span {
+      color: #6c5ce7;
+      font-weight: bold;
+    }
+
     .gallery-section {
       margin-top: 40px;
     }
@@ -119,7 +159,7 @@
     </div>
 
     <div class="section">
-      <strong>🏛️ 홀 정보 및 대관료:</strong>
+      <strong>🏛️ 홀 정보 및 대관료(정가):</strong>
       <ul class="hall-list">
         <li class="hall-item">
           <strong>엠버루체 (170석)</strong> — 
@@ -148,8 +188,74 @@
       <span class="price-2025">2025년: 7.2만원</span>, 
       <span class="price-2026">2026년: 7.6만원</span>
     </div>
-
-    <div class="section">
+<div class="section">
+      <strong>🏛️ 예약 견적 정보:</strong>
+      <table>
+        <thead>
+          <tr>
+            <th>홀</th>
+            <th>일시</th>
+            <th>식대</th>
+            <th>대관료</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 엠버루체 -->
+          <tr>
+            <td rowspan="3"><strong>엠버루체</strong></td>
+            <td>11월 오후</td>
+            <td class="price-2025">식대 6.2만원</td>
+            <td class="price-2025">대관료 400만원</td>
+          </tr>
+          <tr>
+            <td>11월 일요일 12:00</td>
+            <td class="price-2025">식대 6.2만원</td>
+            <td class="price-2025">대관료 470만원</td>
+          </tr>
+          <tr>
+            <td>1월 토요일 15:40</td>
+            <td class="price-2025">식대 6.2만원</td>
+            <td class="price-2025">대관료 450만원</td>
+          </tr>
+          <!-- 아트리움 -->
+          <tr>
+            <td rowspan="3"><strong>아트리움</strong></td>
+            <td>8월 30일 토요일</td>
+            <td class="price-2025">식대 6.4만원</td>
+            <td class="price-2025">대관료 400만원</td>
+          </tr>
+          <tr>
+            <td>1월 토요일 15:00</td>
+            <td class="price-2025">식대 6.4만원</td>
+            <td class="price-2025">대관료 450만원</td>
+          </tr>
+          <tr>
+            <td>3월 2일 월요일 15:30 200명</td>
+            <td class="price-2025">식대 6만원</td>
+            <td class="price-2025">대관료 300만원 (비수기 평일)</td>
+          </tr>
+          <!-- 그랜드홀 -->
+          <tr>
+            <td rowspan="3"><strong>그랜드홀</strong></td>
+            <td>8월 30일 토요일</td>
+            <td class="price-2025">식대 6.4만원</td>
+            <td class="price-2025">대관료 450만원</td>
+          </tr>
+          <tr>
+            <td>6월 1일 일요일</td>
+            <td class="price-2025">식대 6만원</td>
+            <td class="price-2025">대관료 480만원</td>
+          </tr>
+          <tr>
+            <td>2월 일요일</td>
+            <td class="price-2025">식대 6.2만원</td>
+            <td class="price-2025">대관료 600만원</td>
+          </tr>		  
+        </tbody>
+      </table>
+    </div>
+	
+	   <div class="section">
       <strong>📝 특이사항:</strong>
       <ul class="features-list">
         <li>가격 합리적</li>
