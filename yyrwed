@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>예식장 정보</title>
+  <link href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+      font-family: 'SUIT', sans-serif;
+      background: linear-gradient(135deg, #f8f9fb, #edf0f5);
+      margin: 40px;
+      color: #2c3e50;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #a76cff;
+      text-align: center;
+      border-bottom: 2px solid #f1f1f1;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section strong {
+      color: #5d5d5d;
+      font-weight: 600;
+    }
+
+    .price-2025 {
+      color: #6c5ce7;
+      font-weight: bold;
+    }
+
+    .price-2026 {
+      color: #e67e22;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #a76cff;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    td strong {
+      color: #6c5ce7;
+    }
+
+    .schedule-section {
+      margin-top: 30px;
+      background: #f5f7fa;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .schedule-section h3 {
+      color: #5a30ff;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .schedule-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .schedule-item {
+      background: #ffffff;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .schedule-item span {
+      color: #6c5ce7;
+      font-weight: bold;
+    }
+
+    .gallery-section {
+      margin-top: 40px;
+    }
+
+    .gallery-section h3 {
+      color: #5a30ff;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image-row img {
+      width: calc(50% - 5px);
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .image-row img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .image-row img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>여율리</h2>
+
+    <div class="section">
+      <strong>📍 위치:</strong> 여의도역(5,9호선)
+    </div>
+
+    <div class="section">
+      <strong>🏛️ 홀 정보 및 대관료(정가):</strong>
+      <ul class="hall-list">
+        <li class="hall-item">
+          <strong>단독 홀</strong> — 
+          <span class="price-2025">1050만원</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <strong>🍽️ 식사 정보:</strong> 뷔페(음식퀄리티 및 종류 GOOD, 밥율리)
+    </div>
+
+    <div class="section">
+      <strong>💰 식사 단가(정가):</strong> 
+      <span class="price-2025">9.3만원</span>
+    </div>
+<div class="section">
+      <strong>🏛️ 예약 견적 정보:</strong>
+      <table>
+        <thead>
+          <tr>
+            <th>홀</th>
+            <th>일시</th>
+            <th>식대</th>
+            <th>대관료</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 엠버루체 -->
+          <tr>
+            <td rowspan="3"><strong>단독 홀</strong></td>
+            <td>26년 3월 토요일 16:50</td>
+            <td class="price-2025">식대 7만원</td>
+            <td class="price-2025">대관료 456만원</td>
+          </tr>
+          <tr>
+            <td>26년 4월 오후</td>
+            <td class="price-2025">식대 7.6만원</td>
+            <td class="price-2025">대관료 690만원</td>
+          </tr>
+          <tr>
+            <td>26년 5월 오후</td>
+            <td class="price-2025">식대 8만원</td>
+            <td class="price-2025">대관료 700만원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	
+	   <div class="section">
+      <strong>📝 특이사항:</strong>
+      <ul class="features-list">
+        <li>식 간격 짧음(70분)</li>
+		<li>여의도역 도보 5분</li>
+        <li>어두운 홀</li>
+        <li>홀 층고 낮음, 로비 좁음</li>
+      </ul>
+    </div>
+
+    <div class="gallery-section">
+      <h3>단독 홀</h3>
+      <div class="image-row">
+        <img src="./yyrwed1.jpg" alt="엠버루체 1">
+        <img src="./yyrwed2.jpg" alt="엠버루체 2">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
