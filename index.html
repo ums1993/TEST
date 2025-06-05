@@ -2,10 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>웨딩홀 리스트</title>
-  <!-- Font Awesome 아이콘 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/1gP1w5RX1f0jlD3km0rU3uogmjS8Jz+qK5TkAdIupNzhO0k3QFckdH+jK9K5G65zv6KX1IvVZTXcJbZaqOt4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <title>웨딩홀 평가 결과</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
@@ -13,16 +11,24 @@
     body {
       margin: 0;
       padding: 50px 20px;
-      background: linear-gradient(135deg, #f9f7f9, #f1f4f9);
+      background: linear-gradient(135deg, #f0f0ff, #fdfdfd);
       font-family: 'SUIT', sans-serif;
       color: #333;
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      font-size: 2.5rem;
-      color: #a76cff;
-      margin-bottom: 40px;
+      color: #5a30ff;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 50px;
     }
 
     .grid-container {
@@ -30,16 +36,15 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 20px auto;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.85);
       border-radius: 16px;
-      padding: 24px 20px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -54,14 +59,28 @@
       font-weight: 600;
       font-size: 1.05rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .card i {
       color: #e488ff;
       font-size: 1.2rem;
+    }
+
+    .fail i {
+      color: #ccc;
+    }
+
+    .fail a, .fail {
+      opacity: 0.6;
+      text-decoration: line-through;
+    }
+
+    .fail span {
+      color: red;
+      font-weight: bold;
     }
 
     @media (max-width: 480px) {
@@ -73,30 +92,37 @@
 </head>
 <body>
 
-  <h1><i class="fas fa-ring"></i> 웨딩홀 리스트</h1>
 
+  <h2>✅ 후보군 웨딩홀</h2>
   <div class="grid-container">
+	<div class="card"><a href="./PJ.html"><i class="fas fa-ring"></i> PJ호텔<br>(을지로)</a></div>	
     <div class="card"><a href="./JK.html"><i class="fas fa-ring"></i> JK 아트컨벤션<br>(영등포)</a></div>
-    <div class="card"><a href="./PJ.html"><i class="fas fa-ring"></i> PJ호텔<br>(을지로)</a></div>
-    <div class="card"><a href="./grandConventionCenter.html"><i class="fas fa-ring"></i> 그랜드컨벤션센터<br>(당산)</a></div>
-    <div class="card"><a href="./weddingConvention.html"><i class="fas fa-ring"></i> 여의도웨딩컨벤션<br>(여의도)</a></div>
-    <div class="card"><a href="./weddingSignature.html"><i class="fas fa-ring"></i> 웨딩시그니처<br>(합정)</a></div>
-    <div class="card"><a href="./erumWedding.html"><i class="fas fa-ring"></i> 이룸웨딩컨벤션<br>(공덕)</a></div>
-    <div class="card"><a href="./laLuce.html"><i class="fas fa-ring"></i> 라루체<br>(명동)</a></div>
-    <div class="card"><a href="./botanicPark.html"><i class="fas fa-ring"></i> 보타닉파크웨딩<br>(마곡나루)</a></div>
-    <div class="card"><a href="./VillaDGGangNam.html"><i class="fas fa-ring"></i><s> 빌라드지디 논현<br>(강남구청)<br><span style="color: red;">1000🡅</span></s></a></div>
-    <div class="card"><a href="./VillaDGC.html"><i class="fas fa-ring"></i> <s>빌라드지디 청담<br>(청담)<br><span style="color: red;">1000🡅</span></s></a></div>
-    <div class="card"><a href="./siempre.html"><i class="fas fa-ring"></i> 시엠프레 도산150<br>(신사)</a></div>
-    <div class="card"><a href="./tov.html"><i class="fas fa-ring"></i> <s>토브헤세드<br>(학동)<br><span style="color: red;">코스요리</span></s></a></div>
-    <div class="card"><a href="#class"><i class="fas fa-ring"></i> <s>더클래스청담<br>(압구정로데오)<br><span style="color: red;">1000🡅</span></s></a></div>
-    <div class="card"><a href="#crest"><i class="fas fa-ring"></i> <s>크레스트72<br>(동대입구)<br><span style="color: red;">1000🡅</span></s></a></div>
-    <div class="card"><a href="#royal"><i class="fas fa-ring"></i> <s>로얄파크컨벤션<br>(삼각지)<br><span style="color: red;">900🡅</span></s></a></div>
-    <div class="card"><a href="#the-leeng"><i class="fas fa-ring"></i> <s>더링크호텔서울<br>(구로)<br><span style="color: red;">1000🡅</span></s></a></div>
-    <div class="card"><a href="./Onzedrom.html"><i class="fas fa-ring"></i> 온즈드롬<br>(명동)</a></div>
-    <div class="card"><a href="#eltower"><i class="fas fa-ring"></i> <s>엘타워<br>(양재)<br><span style="color: red;">1000🡅</span></s></a></div>
-    <div class="card"><i class="fas fa-ring"></i>아펠가모<br>(공덕)</a></div>
-    <div class="card"><i class="fas fa-ring"></i>더베일리하우스<br>(삼성)</a></div>
-    <div class="card"><i class="fas fa-ring"></i>상록아트홀<br>(선릉)</a></div>
+    <div class="card"><a href="#"><i class="fas fa-ring"></i> 웨딩그룹위더스<br>(영등포)</a></div>
+    <div class="card"><a href="#"><i class="fas fa-ring"></i> 웨스턴베니비스<br>(영등포)</a></div>
+    <div class="card"><a href="#"><i class="fas fa-ring"></i> 더컨벤션<br>(영등포)</a></div>
+    <div class="card"><a href="#"><i class="fas fa-ring"></i> 여율리<br>(여의도)</a></div>
+  </div>
+
+  <h2>❌ 탈락 웨딩홀</h2>
+  <div class="grid-container">
+    <div class="card fail"><a href="./grandConventionCenter.html"><i class="fas fa-ring"></i> 그랜드컨벤션센터<br>(당산)</a></div>
+    <div class="card fail"><a href="./weddingConvention.html"><i class="fas fa-ring"></i> 여의도웨딩컨벤션<br>(여의도)</a></div>
+    <div class="card fail"><a href="./weddingSignature.html"><i class="fas fa-ring"></i> 웨딩시그니처<br>(합정)</a></div>
+    <div class="card fail"><a href="./erumWedding.html"><i class="fas fa-ring"></i> 이룸웨딩컨벤션<br>(공덕)</a></div>
+    <div class="card fail"><a href="./laLuce.html"><i class="fas fa-ring"></i> 라루체<br>(명동)</a></div>
+    <div class="card fail"><a href="./botanicPark.html"><i class="fas fa-ring"></i> 보타닉파크웨딩<br>(마곡나루)</a></div>
+    <div class="card fail"><a href="./VillaDGGangNam.html"><i class="fas fa-ring"></i> 빌라드지디 논현<br>(강남구청)<br><span>1000🡅</span></a></div>
+    <div class="card fail"><a href="./VillaDGC.html"><i class="fas fa-ring"></i> 빌라드지디 청담<br>(청담)<br><span>1000🡅</span></a></div>
+    <div class="card fail"><a href="./siempre.html"><i class="fas fa-ring"></i> 시엠프레 도산150<br>(신사)</a></div>
+    <div class="card fail"><a href="./tov.html"><i class="fas fa-ring"></i> 토브헤세드<br>(학동)<br><span>코스요리</span></a></div>
+    <div class="card fail"><a href="#class"><i class="fas fa-ring"></i> 더클래스청담<br>(압구정로데오)<br><span>1000🡅</span></a></div>
+    <div class="card fail"><a href="#crest"><i class="fas fa-ring"></i> 크레스트72<br>(동대입구)<br><span>1000🡅</span></a></div>
+    <div class="card fail"><a href="#royal"><i class="fas fa-ring"></i> 로얄파크컨벤션<br>(삼각지)<br><span>900🡅</span></a></div>
+    <div class="card fail"><a href="#the-leeng"><i class="fas fa-ring"></i> 더링크호텔서울<br>(구로)<br><span>1000🡅</span></a></div>
+    <div class="card fail"><a href="./Onzedrom.html"><i class="fas fa-ring"></i> 온즈드롬<br>(명동)</a></div>
+    <div class="card fail"><i class="fas fa-ring"></i> 아펠가모<br>(공덕)</div>
+    <div class="card fail"><i class="fas fa-ring"></i> 더베일리하우스<br>(삼성)</div>
+    <div class="card fail"><i class="fas fa-ring"></i> 상록아트홀<br>(선릉)</div>
   </div>
 
 </body>
